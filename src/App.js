@@ -17,10 +17,9 @@ export default class App extends PureComponent {
       filteredEmoji: filterEmoji(event.target.value, 20)
     });
   };
-
   render() {
     return (
-      <div>
+      <div data-testid="appdiv">
         <Header />
         <SearchInput textChange={this.handleSearchChange} />
         <EmojiResults emojiData={this.state.filteredEmoji} />
